@@ -97,9 +97,14 @@ public class MenuManager : MonoBehaviour
         CreditsPanel.SetActive(false);
     }
 
-    
+    public void QuitGame()
+    {
+        Debug.Log("Quit");
+        Application.Quit();
+    }
 
-    public void CloseAllPanels()
+
+public void CloseAllPanels()
     {
         ContinuePanel.SetActive(false);
         NewGamePanel.SetActive(false);
