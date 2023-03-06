@@ -16,17 +16,6 @@ public class MenuManager : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip buttonClick;
-    public void OpenCreditsPanel()
-    {
-        audioSource.PlayOneShot(buttonClick);
-        CloseAllPanels();
-        CreditsPanel.SetActive(true);
-    }
-    public void CloseCreditsPanel()
-    {
-        CreditsPanel.SetActive(false);
-    }
-
     public void OpenContinuePanel()
     {
         audioSource.PlayOneShot(buttonClick);
@@ -38,6 +27,77 @@ public class MenuManager : MonoBehaviour
     {
         ContinuePanel.SetActive(false);
     }
+
+    public void OpenNewGamePanel()
+    {
+        audioSource.PlayOneShot(buttonClick);
+        CloseAllPanels();
+        NewGamePanel.SetActive(true);
+    }
+    
+    public void CloseNewGamePanel()
+    {
+        NewGamePanel.SetActive(false);
+    }
+
+    public void OpenLoadGamePanel()
+    {
+        audioSource.PlayOneShot(buttonClick);
+        CloseAllPanels();
+        LoadGamePanel.SetActive(true);
+    }
+
+    public void CloseLoadGamePanel()
+    {
+        LoadGamePanel.SetActive(false);
+    }
+
+    public void OpenSettingsPanel()
+    {
+        audioSource.PlayOneShot(buttonClick);
+        CloseAllPanels();
+        SettingsPanel.SetActive(true);
+    }
+
+    public void CloseSettingsPanel()
+    {
+        SettingsPanel.SetActive(false);
+    }
+
+    public void OpenHelpsPanel()
+    {
+        audioSource.PlayOneShot(buttonClick);
+        CloseAllPanels();
+        HelpsPanel.SetActive(true);
+    }
+
+    public void CloseHelpsPanel()
+    {
+        HelpsPanel.SetActive(false);
+    }
+    public void OpenDLCsPanel()
+    {
+        audioSource.PlayOneShot(buttonClick);
+        CloseAllPanels();
+        DLCsPanel.SetActive(true);
+    }
+
+    public void CloseDLCsPanel()
+    {
+        DLCsPanel.SetActive(false);
+    }
+    public void OpenCreditsPanel()
+    {
+        audioSource.PlayOneShot(buttonClick);
+        CloseAllPanels();
+        CreditsPanel.SetActive(true);
+    }
+    public void CloseCreditsPanel()
+    {
+        CreditsPanel.SetActive(false);
+    }
+
+    
 
     public void CloseAllPanels()
     {
