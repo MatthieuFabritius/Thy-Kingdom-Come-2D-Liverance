@@ -14,6 +14,14 @@ public class MenuManager : MonoBehaviour
     public GameObject DLCsPanel;
     public GameObject CreditsPanel;
 
+    public GameObject ContinueButton;
+    public GameObject NewGameButton;
+    public GameObject LoadGameButton;
+    public GameObject SettingsButton;
+    public GameObject HelpsButton;
+    public GameObject DLCsButton;
+    public GameObject CreditsButton;
+
     public AudioSource audioSource;
     public AudioClip buttonClick;
     public void OpenContinuePanel()
@@ -103,7 +111,24 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void OpenPlayButton()
+    {
+        audioSource.PlayOneShot(buttonClick);
+        CloseAllPanels();
+        ContinueButton.SetActive(true);
+        NewGameButton.SetActive(true);
+        LoadGameButton.SetActive(true);
+    }
 
+    public void OpenOptionsButton()
+    {
+        audioSource.PlayOneShot(buttonClick);
+        CloseAllPanels();
+        HelpsButton.SetActive(true);
+        SettingsButton.SetActive(true);
+        DLCsButton.SetActive(true);
+        CreditsButton.SetActive(true);
+    }
 public void CloseAllPanels()
     {
         ContinuePanel.SetActive(false);
@@ -113,6 +138,13 @@ public void CloseAllPanels()
         HelpsPanel.SetActive(false);
         DLCsPanel.SetActive(false);
         CreditsPanel.SetActive(false);
+        ContinueButton.SetActive(false);
+        NewGameButton.SetActive(false);
+        LoadGameButton.SetActive(false);
+        SettingsButton.SetActive(false);
+        HelpsButton.SetActive(false);
+        DLCsButton.SetActive(false);
+        CreditsButton.SetActive(false);
         // autre panels
     }
 }
