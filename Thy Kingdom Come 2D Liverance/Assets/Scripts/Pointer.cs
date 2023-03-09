@@ -7,17 +7,20 @@ public class Pointer : MonoBehaviour
 {
     public AudioSource audioSource;
     public AudioClip PointerEnterSound;
-    public GameObject arrow;
+    public Button button;
+    public Sprite newSprite;
+    public Sprite originalSprite;
+   
 
     public void PointerEnter()
     {
         audioSource.PlayOneShot(PointerEnterSound);
-        arrow.SetActive(true);
+        button.image.sprite = newSprite;
     }
 
     public void PointerExit()
     {
-        arrow.SetActive(false);
+        button.image.sprite = originalSprite;
     }
 
 }
