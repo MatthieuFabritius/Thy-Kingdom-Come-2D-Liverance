@@ -113,8 +113,8 @@ public class MenuManager : MonoBehaviour
 
     public void OpenPlayButton()
     {
-        audioSource.PlayOneShot(buttonClick);
         CloseAllPanels();
+        audioSource.PlayOneShot(buttonClick);
         ContinueButton.SetActive(true);
         NewGameButton.SetActive(true);
         LoadGameButton.SetActive(true);
@@ -122,8 +122,8 @@ public class MenuManager : MonoBehaviour
 
     public void OpenOptionsButton()
     {
-        audioSource.PlayOneShot(buttonClick);
         CloseAllPanels();
+        audioSource.PlayOneShot(buttonClick);
         HelpsButton.SetActive(true);
         SettingsButton.SetActive(true);
         DLCsButton.SetActive(true);
